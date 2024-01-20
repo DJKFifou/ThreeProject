@@ -2,8 +2,8 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
 import GUI from 'lil-gui'
-// import gsap from 'gsap'
-// import { TweenMax } from 'gsap'
+import gsap from 'gsap'
+import { TweenMax } from 'gsap'
 
 /**
  * Base
@@ -286,7 +286,7 @@ function addSkeleton(gltf, position) {
         skeleton.rotation.y = Math.PI / 2;
 
         // Utiliser GSAP pour animer le déplacement sur l'axe x
-        // TweenMax.to(skeleton.position, 10, { x: "+=5", repeat: -1, yoyo: true }); // Répéter l'animation en boucle
+        TweenMax.to(skeleton.position, 10, { x: "+=5", repeat: -1, yoyo: true }); // Répéter l'animation en boucle
 
         console.log(skeleton);
     } else {
